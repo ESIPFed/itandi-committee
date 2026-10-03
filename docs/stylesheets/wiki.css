@@ -41,3 +41,20 @@
 .md-typeset iframe {
   max-width: 100%;
 }
+
+/* MediaWiki "wikitable" look for the many schedule/agenda tables. */
+.md-typeset table:not([class]) {
+  border: 1px solid #a2a9b1;
+  font-size: 0.95em;
+}
+
+.md-typeset table:not([class]) th {
+  background: #eaecf0;
+  font-weight: 700;
+}
+
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+  border: 1px solid #a2a9b1;
+  padding: 0.3em 0.6em;
+}

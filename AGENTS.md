@@ -23,8 +23,24 @@ Work on a later phase only when the earlier ones are in place or the request nam
 
 ## Relationship to the harvest repository
 
-The raw material for phase may live in a sibling repository, `esip_wiki` (at `../esip_wiki` in a normal checkout layout). That repository harvested the full ESIP wiki to disk — wikitext, full-history XML, rendered HTML, and attachments — and drew the IT&I scope as an explicit boundary of 211 titles (113 articles plus the files, categories, and templates they depend on), recorded in its `iti-titles.txt` and `iti-scope.json`. It is the source; this repository is the published archive. A MediaWiki title is not a filename there, and the mapping is not one to one: read its `manifest.json` and `files-index.json` to go from a file back to its page, rather than reconstructing titles from paths. Read that repository's `CONTEXT.md` before relying on any harvest detail.
+The raw material for phase one may live in a sibling repository, `esip_wiki` (at `../esip_wiki` in a normal checkout layout). That repository harvested the full ESIP wiki to disk — wikitext, full-history XML, rendered HTML, and attachments — and drew the IT&I scope as an explicit boundary of 211 titles (113 articles plus the files, categories, and templates they depend on), recorded in its `iti-titles.txt` and `iti-scope.json`. It is the source; this repository is the published archive. A MediaWiki title is not a filename there, and the mapping is not one to one: read its `manifest.json` and `files-index.json` to go from a file back to its page, rather than reconstructing titles from paths. Read that repository's `CONTEXT.md` before relying on any harvest detail.
+
+## How the archive is built
+
+The published archive lives in `docs/` and is served by MkDocs (Material theme), built and deployed to GitHub Pages by `.github/workflows/pages.yml` on every push to `main`. The site is a project page at `https://esipfed.github.io/itandi-committee/`.
+
+Conversion from the harvest is a **local authoring step, not a CI step**: the `../esip_wiki/archive/` harvest (~4.5 GB) is not committed, so the workflow only builds the Markdown already in `docs/`. To regenerate the archive, run `python tools/convert.py` from the repo root with the `esip_wiki` sibling checked out and `pandoc` on the PATH. Building the site locally needs `mkdocs-material` (`pip install -r requirements.txt`, then `mkdocs serve`).
+
+`tools/convert.py`:
+- reads which pages to re-host from `tools/scope.tsv` (the curated worklist — one row per candidate article with an `include`/`exclude` decision);
+- converts each page's wikitext with pandoc, falling back to the rendered-HTML track when pandoc cannot parse the wikitext, and to the full-history XML when a page has no current revision;
+- rewrites internal links to local pages, resolves images and attachments into `docs/files/`, and points every out-of-archive link at the live wiki;
+- writes `tools/slugmap.json` (title → page slug), `tools/external-links.json` (every link that now points back to `wiki.esipfed.org` — a worklist for when more pages are archived), and the grouped site nav into `mkdocs.yml` between the `# NAV` markers.
+
+## Scope of the archive
+
+The harvest bounded IT&I to 211 titles by a depth-4 link walk, but that walk reaches federation-wide and other-cluster pages the committee only linked to (the overall ESIP strategic plan, whole-meeting schedules, Federated Search / Preservation / Semantic Web topic pages, and so on). `tools/scope.tsv` narrows this to the committee's own content — its governance, the Tech Dive and Rants & Raves webinar series, telecons and meeting notes, the technical workshops it ran, and its demonstrations — currently **32 published pages** with their attachments. Everything excluded resolves to the live wiki and is logged in `tools/external-links.json`. Changing scope means editing `scope.tsv` and re-running the converter.
 
 ## Current state
 
-Phase one is starting from an effectively empty repository — this file and a stub README. The archive content, the Pages build, and the curation decisions about what belongs in a permanent archive are not yet in place.
+Phase one is in place: 32 curated pages with their attachments under `docs/`, the MkDocs build, the Pages workflow, and the curation worklist. Enabling Pages (source: GitHub Actions) in the repository settings is a one-time manual step on github.com. Later phases — awesome list, help tracker, meetings and activities — are not started.
