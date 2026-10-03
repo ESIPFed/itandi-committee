@@ -1,8 +1,8 @@
 ---
-title: "IT&I Wiki Archive"
+title: "ESIP IT&I Committee"
 ---
 
-# ESIP IT&I Committee — Wiki Archive
+# ESIP IT&I Committee
 
 This is a read-only archive of the ESIP Information Technology & Interoperability (IT&I) Committee's pages, migrated from the ESIP MediaWiki to keep them durable and readable.
 

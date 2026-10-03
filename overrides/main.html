@@ -1,5 +1,39 @@
 {% extends "base.html" %}
 
+{#- MkDocs emits site_name / page.title into <title> without HTML-escaping, so
+    the "&" in "IT&I" comes out bare (invalid) and link unfurlers show "&amp;".
+    Re-emit the title escaped, and add Open Graph / Twitter tags (absent by
+    default) so Slack and others unfurl a clean title and description. -#}
+{% block htmltitle %}
+  <title>{% if page and page.title and not page.is_homepage %}{{ page.title | e }} - {{ config.site_name | e }}{% else %}{{ config.site_name | e }}{% endif %}</title>
+{% endblock %}
+
+{% block extrahead %}
+  {% if page and page.title and not page.is_homepage %}
+    {% set meta_title = page.title ~ " - " ~ config.site_name %}
+  {% else %}
+    {% set meta_title = config.site_name %}
+  {% endif %}
+  {% set meta_desc = page.meta.description if page and page.meta and page.meta.description else config.site_description %}
+  {% set social_image = config.site_url ~ "assets/social-card.png" %}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ config.site_name | e }}">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="{{ meta_title | e }}">
+  <meta property="og:description" content="{{ meta_desc | e }}">
+  {% if page and page.canonical_url %}<meta property="og:url" content="{{ page.canonical_url }}">{% endif %}
+  <meta property="og:image" content="{{ social_image }}">
+  <meta property="og:image:secure_url" content="{{ social_image }}">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ config.site_name | e }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ meta_title | e }}">
+  <meta name="twitter:description" content="{{ meta_desc | e }}">
+  <meta name="twitter:image" content="{{ social_image }}">
+{% endblock %}
+
 {#- Full-height navy panel behind the left column (the sidebar sits inside a
     centred grid and has no real height of its own), plus the ESIP swoosh pinned
     to the bottom of that panel, linking home. The panel comes first so the nav
