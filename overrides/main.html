@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{#- Full-height navy panel behind the left column (the sidebar sits inside a
+    centred grid and has no real height of its own), plus the ESIP swoosh pinned
+    to the bottom of that panel, linking home. The panel comes first so the nav
+    paints on top of it; the swoosh comes last so it paints on top of both. -#}
+{% block site_nav %}
+  <div class="esip-leftfill" aria-hidden="true"></div>
+  {{ super() }}
+  <a class="esip-home" href="https://www.esipfed.org/" title="ESIP home" target="_blank" rel="noopener">
+    <img src="{{ 'assets/esip-swoosh.png' | url }}" alt="">
+    <span>ESIP Home</span>
+  </a>
+{% endblock %}

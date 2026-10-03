@@ -2,10 +2,125 @@
    Material theme. Goal is "reads like the old wiki," not a pixel copy. */
 
 :root {
-  --md-primary-fg-color: #36c;
-  --md-accent-fg-color: #447ff5;
-  /* MediaWiki link blue / visited purple */
+  /* ESIP brand: navy header/footer (esipfed.org footer #0E1A30), teal accent. */
+  --esip-navy: #0e1a30;
+  --esip-navy-dark: #0a1324;
+  --esip-teal: #3ba1b9;
+}
+
+/* Material sets its palette variables on <body> via these attributes, so the
+   overrides must sit on a body-level selector (loaded after palette.css) to
+   win the cascade; a plain :root rule loses to the body-scoped defaults. */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: var(--esip-navy);
+  --md-primary-fg-color--dark: var(--esip-navy-dark);
+  --md-accent-fg-color: var(--esip-teal);
+  --md-footer-bg-color: var(--esip-navy);
+  --md-footer-bg-color--dark: var(--esip-navy-dark);
+  /* MediaWiki link blue, kept for the archived content body */
   --md-typeset-a-color: #3366cc;
+}
+
+/* Dark navy left navigation with light text. Material paints both the sidebar
+   wrapper and the nav list (.md-nav--primary) with the default bg, so colour
+   both, across the mobile-drawer and desktop breakpoints. */
+.md-sidebar--primary,
+.md-sidebar--primary .md-sidebar__scrollwrap,
+.md-nav--primary,
+.md-nav--primary .md-nav,
+.md-nav--primary .md-nav__title,
+.md-nav--primary .md-nav__title[for="__drawer"],
+.md-nav--primary .md-nav__title ~ .md-nav__list {
+  background-color: var(--esip-navy);
+}
+
+.md-sidebar--primary .md-nav__title,
+.md-sidebar--primary .md-nav__link,
+.md-sidebar--primary label {
+  color: #cdd6e4;
+}
+
+/* Material masks the sticky nav title with a white box-shadow "scrim"; drop it
+   so no white glow bleeds above the first nav item on the navy column. */
+.md-sidebar--primary .md-nav--primary .md-nav__title,
+.md-sidebar--primary .md-nav--primary .md-nav__title ~ .md-nav__list {
+  box-shadow: none;
+}
+
+.md-sidebar--primary .md-nav__link:hover,
+.md-sidebar--primary .md-nav__link:focus,
+.md-sidebar--primary .md-nav__link--active,
+.md-sidebar--primary .md-nav__item--active > .md-nav__link {
+  color: #fff;
+}
+
+/* Full-height navy left column plus the "ESIP Home" logo pinned to its bottom.
+   The panel spans the viewport's left edge to the sidebar's right edge:
+   (half the grid gutter) + the 12.1rem sidebar width. Grid max-width is 61rem. */
+.esip-leftfill {
+  display: none;
+}
+
+.esip-home {
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.esip-home img {
+  width: 2.1rem;
+  height: auto;
+  display: block;
+}
+
+.esip-home span {
+  color: #cdd6e4;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+}
+
+/* Desktop: a fixed navy column; the logo+label centred in the sidebar column
+   (left edge = the grid gutter, width = the 12.1rem sidebar) and pinned bottom. */
+@media screen and (min-width: 76.25em) {
+  .esip-leftfill {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: calc((100vw - 61rem) / 2 + 12.1rem);
+    background-color: var(--esip-navy);
+    z-index: 0;  /* behind the nav (painted later in the DOM) and the header */
+  }
+  .esip-home {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: calc((100vw - 61rem) / 2);
+    width: 12.1rem;
+    padding: 0.7rem 0;
+    z-index: 3;
+  }
+}
+
+/* Narrow: the nav is a slide-in drawer. Show the same logo at the bottom of the
+   drawer only while it is open, aligned to the 12.1rem drawer width. */
+@media screen and (max-width: 76.1875em) {
+  .esip-home {
+    display: none;
+  }
+  [data-md-toggle="drawer"]:checked ~ .md-container .esip-home {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 12.1rem;
+    padding: 0.7rem 0;
+    background-color: var(--esip-navy);
+    z-index: 6;  /* above the drawer (z-index 5) */
+  }
 }
 
 /* Vector draws a thin rule under the page title and section headings. */

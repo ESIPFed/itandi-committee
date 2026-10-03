@@ -35,7 +35,16 @@ Conversion from the harvest is a **local authoring step, not a CI step**: the `.
 - reads which pages to re-host from `tools/scope.tsv` (the curated worklist — one row per candidate article with an `include`/`exclude` decision);
 - converts each page's wikitext with pandoc, falling back to the rendered-HTML track when pandoc cannot parse the wikitext, and to the full-history XML when a page has no current revision;
 - rewrites internal links to local pages, resolves images and attachments into `docs/files/`, and points every out-of-archive link at the live wiki;
-- writes `tools/slugmap.json` (title → page slug), `tools/external-links.json` (every link that now points back to `wiki.esipfed.org` — a worklist for when more pages are archived), and the grouped site nav into `mkdocs.yml` between the `# NAV` markers.
+- writes `tools/slugmap.json` (title → page slug) and `tools/external-links.json` (every link that now points back to `wiki.esipfed.org` — a worklist for when more pages are archived);
+- generates the archive home (`docs/index.md`): a short intro, links to the current ESIP committee page and this repo, and an annotated, grouped index of the pages. The committee's old wiki landing page is kept as a normal page (`interoperability-and-technology.md`), not the home;
+- writes the grouped site nav into `mkdocs.yml` between the `# NAV` markers. The section grouping and the per-page annotations live in `SECTIONS`/`ANNOTATIONS` in `tools/convert.py`.
+
+## Theme and branding
+
+The site is styled to loosely match esipfed.org:
+- `docs/assets/` holds the ESIP logos pulled from the logo-citation page — the white acronym logo (header), the favicon (browser tab), and the swoosh (the "ESIP Home" mark).
+- `docs/stylesheets/wiki.css` carries the brand colors (navy header/footer/sidebar `#0e1a30`, teal accent `#3ba1b9`) and a loose MediaWiki-skin look for the archived content (link blue, heading rules, wikitable styling). Material sets its palette variables on `<body>`, so the brand overrides sit on a `[data-md-color-scheme="default"]` selector to win the cascade.
+- `overrides/main.html` (the theme's `custom_dir`) injects a full-height navy panel behind the left column and the bottom "ESIP Home" logo+label linking to esipfed.org — centered in the sidebar column on desktop, and pinned to the bottom of the nav drawer while it is open on narrow screens.
 
 ## Scope of the archive
 
@@ -43,4 +52,4 @@ The harvest bounded IT&I to 211 titles by a depth-4 link walk, but that walk rea
 
 ## Current state
 
-Phase one is in place: 32 curated pages with their attachments under `docs/`, the MkDocs build, the Pages workflow, and the curation worklist. Enabling Pages (source: GitHub Actions) in the repository settings is a one-time manual step on github.com. Later phases — awesome list, help tracker, meetings and activities — are not started.
+Phase one is in place: 32 curated committee pages with their attachments under `docs/`, a generated archive home, ESIP branding, the MkDocs build, the Pages workflow, and the curation worklist. Enabling Pages (source: GitHub Actions) in the repository settings is a one-time manual step on github.com. Later phases — awesome list, help tracker, meetings and activities — are not started.
