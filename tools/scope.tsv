@@ -1,0 +1,114 @@
+decision	depth	title	via
+exclude	2	'Slippy' Multi-Server WMS Client	Summer 2007 Technical Workshops
+exclude	2	EDAC Metadata	Metadata Catalogs hosted by ESIP Members
+exclude	2	Earth Information Exchange Portlets	Summer 2007 Technical Workshops
+exclude	2	Earth Science Data: Why So Difficult?	2010 Rant and Raves Webinar Series and Telecon Information
+exclude	2	GCMD Metadata	Metadata Catalogs hosted by ESIP Members
+exclude	2	IAI-DIS Metadata	Metadata Catalogs hosted by ESIP Members
+exclude	2	Making Science Data Easier to Use with OPeNDAP	Summer 2010 Technical Workshops
+exclude	2	Metadata Collection Information Template	Metadata Catalogs hosted by ESIP Members
+exclude	2	NASA ESDSWG--Standards Process Group; Future Potential Standards for Catalogs and Metadata	Summer 2007 Technical Workshops
+exclude	2	Preservation Ontology	Jluly 12-13 Summer Meeting, Santa Fe, NM
+exclude	2	Provenance and Context Content Standard	Jluly 12-13 Summer Meeting, Santa Fe, NM
+exclude	2	Semantic Web Tutorial	Summer 2007 Technical Workshops
+exclude	2	Sensor Web Tutorial	Summer 2007 Technical Workshops
+exclude	3	DIAL	IT&I Summer 2006 Workshops
+exclude	3	Data Service Ontologies	Workflow Engines: Why So Many?
+exclude	3	ESC Cluster Meeting at ESIP 2011 Summer Meeting	Summer 2011 Meeting - Session Details
+exclude	3	ESC Implementation Strategies	Summer 2011 Meeting - Session Details
+exclude	3	Federated Search	Earth Science Data: Why So Difficult?
+exclude	3	GeoBrain BPELPower Workflow Engine	Workflow Engines: Why So Many?
+exclude	3	Getting Started with MapServer	IT&I Summer 2006 Workshops
+exclude	3	Interagency Data Stewardship/LifeCycle/Preservation Forum/TeleconNotes/2011-03-09	Preservation Ontology
+exclude	3	OGC Implementation with MapServer	IT&I Summer 2006 Workshops
+exclude	3	Preservation Use Case Activity	Provenance and Context Content Standard
+exclude	3	SPG Agenda July 12 2011	July 12, 2011
+exclude	3	Semantic Web	Preservation Ontology
+exclude	4	Collaborative Document Production	Collaboration Tools and Technologies
+exclude	4	Collaborative Web Content Generation	Collaboration Tools and Technologies
+exclude	4	Creating a long term trend data set from multiple data sets	Preservation Use Case Activity
+exclude	4	DSO20080515	Data Service Ontologies
+exclude	4	DSO20080717	Data Service Ontologies
+exclude	4	DSO20081024	Data Service Ontologies
+exclude	4	DSO20090109	Data Service Ontologies
+exclude	4	DSO20090706	Data Service Ontologies
+exclude	4	DataTypeOntologies	Data Service Ontologies
+exclude	4	Discovering data	Preservation Use Case Activity
+exclude	4	Discovery Cast Atom Response Format	Federated Search
+exclude	4	DiscoveryOldNews	Federated Search
+exclude	4	ESC Summer 2011 Notes	ESC Cluster Meeting at ESIP 2011 Summer Meeting
+exclude	4	FROST Architecture Options	Federated Search
+exclude	4	FROST Clients	Federated Search
+exclude	4	FROST Servers and Indexers	Federated Search
+exclude	4	FS Background	Federated Search
+exclude	4	FS Cluster History	Federated Search
+exclude	4	FS Cluster Participants	Federated Search
+exclude	4	FedSearchAbstract2009	Federated Search
+exclude	4	Federated Search Convention	Federated Search
+exclude	4	Federated Search To Do	Federated Search
+exclude	4	FederatedSearchUseCases	Federated Search
+exclude	4	How-To Guide for Implementing ESIP Federated Search Servers	Federated Search
+exclude	4	Interagency Data Stewardship/Citations	Interagency Data Stewardship/LifeCycle/Preservation Forum/TeleconNotes/2011-03-09
+exclude	4	Interagency Data Stewardship/Identifiers	Interagency Data Stewardship/LifeCycle/Preservation Forum/TeleconNotes/2011-03-09
+exclude	4	Interagency Data Stewardship/LifeCycle/Preservation Forum/TeleconNotes	Interagency Data Stewardship/LifeCycle/Preservation Forum/TeleconNotes/2011-03-09
+exclude	4	MS101 Data	Getting Started with MapServer
+exclude	4	MS101 Documentation	Getting Started with MapServer
+exclude	4	OpenSearch Description Document Examples	Federated Search
+exclude	4	OpenSearch Response Conventions	Federated Search
+exclude	4	OpenSearch service examples	Federated Search
+exclude	4	Opensearch Strawman Proposal	Federated Search
+exclude	4	Preservation Use Case Choosing a dataset	Preservation Use Case Activity
+exclude	4	Preservation Use Case Obtsaining Data	Preservation Use Case Activity
+exclude	4	Preservation Use Case Reproducing a dataset	Preservation Use Case Activity
+exclude	4	Preservation Use Case Resource Discovery	Preservation Use Case Activity
+exclude	4	Preservation Use Cases	Preservation Use Case Activity
+exclude	4	Publishing/Preserving datasets	Preservation Use Case Activity
+exclude	4	Releasing a data set	Preservation Use Case Activity
+exclude	4	Semantic Technologies	Semantic Web
+exclude	4	SemanticServicesUseCases	Data Service Ontologies
+exclude	4	ServiceOntologies	Data Service Ontologies
+exclude	4	The Convention Making Process	Federated Search
+include	0	2016 IT&I Plan	seed
+include	0	IT&I Chair	seed
+include	0	Interoperability and Technology	None
+include	1	2010 Rant and Raves Webinar Series and Telecon Information	Interoperability and Technology
+include	1	2011 Rant and Raves Webinar Series and Telecon Information	Interoperability and Technology
+exclude	1	2015-2020 Strategic Plan	2016 IT&I Plan
+include	1	Client Side Technology Infusion Working Group	Interoperability and Technology
+include	1	ISRSE Stresa ESIP data access demonstration	Interoperability and Technology
+include	1	Information Technology and Interoperability Committee Members	Interoperability and Technology
+include	1	Interoperability and Technology/2015-06-11 Telecon AgendaNotes	subpage
+include	1	Interoperability and Technology/Interop Telecons	subpage
+include	1	Interoperability and Technology/Past Tech Dive Webinar Series	subpage
+include	1	Interoperability and Technology/Rants And Raves Webinar Series	subpage
+include	1	Interoperability and Technology/Tech Dive Webinar Series	Interoperability and Technology
+include	1	Interoperability and Technology/Telecon Call-in Details	subpage
+include	1	Iti 2006workshops	Interoperability and Technology
+include	1	Iti 2007 winter workshops	Interoperability and Technology
+exclude	1	Jluly 12-13 Summer Meeting, Santa Fe, NM	Interoperability and Technology
+exclude	1	Metadata Catalogs hosted by ESIP Members	Interoperability and Technology
+include	1	Solicitation for Outreach Package Development	Interoperability and Technology
+include	1	Summer 2007 Technical Workshops	Interoperability and Technology
+include	1	Summer 2010 Technical Workshops	Interoperability and Technology
+include	1	Summer Meeting 2010, Knoxville, TN Meeting Notes	Interoperability and Technology
+include	1	Tech Dive webinar series	2016 IT&I Plan
+include	1	Winter Meeting 2011, Washington DC	Interoperability and Technology
+include	2	CSTI Member List	Client Side Technology Infusion Working Group
+include	2	ECHO Web Services Regstration - Hands-on work with the technologies	Summer 2007 Technical Workshops
+exclude	2	ESIP FedSearchWorkshop 2010	Summer 2010 Technical Workshops
+include	2	ISRSE 2009 Service Demonstration Information	ISRSE Stresa ESIP data access demonstration
+include	2	ISRSE 2009 Web Resource Demonstration Information	ISRSE Stresa ESIP data access demonstration
+include	2	IT&I Summer 2006 Workshops	Iti 2006workshops
+exclude	2	July 12, 2011	Jluly 12-13 Summer Meeting, Santa Fe, NM
+exclude	2	July 13, 2011	Jluly 12-13 Summer Meeting, Santa Fe, NM
+exclude	2	July 14, 2011	Jluly 12-13 Summer Meeting, Santa Fe, NM
+exclude	2	July 15, 2011	Jluly 12-13 Summer Meeting, Santa Fe, NM
+include	2	NASA ACCESS/DIAL workshop	Summer 2007 Technical Workshops
+include	2	Summer 2007 Technical Workshop: HYDRA demo and hands-on exercise	Summer 2007 Technical Workshops
+exclude	2	Summer 2011 Meeting - Session Details	Jluly 12-13 Summer Meeting, Santa Fe, NM
+include	2	Technical Workshop Best Practices	2011 Rant and Raves Webinar Series and Telecon Information
+include	2	Telecon Meeting Notes	2010 Rant and Raves Webinar Series and Telecon Information
+include	2	Workflow Engines: Why So Many?	2010 Rant and Raves Webinar Series and Telecon Information
+include	3	Collaboration Tools and Technologies	IT&I Summer 2006 Workshops
+exclude	3	ESIP Summer Meeting 2011 Emergent Sessions	July 12, 2011
+exclude	3	Summer 2011 meeting session agenda	July 14, 2011

@@ -1,0 +1,38 @@
+site_name: ESIP IT&I Committee Wiki Archive
+site_description: >-
+  A durable archive of the ESIP Information Technology and Interoperability
+  Committee's content from the ESIP MediaWiki.
+site_url: https://esipfed.github.io/itandi-committee/
+repo_url: https://github.com/ESIPFed/itandi-committee
+edit_uri: ""
+
+docs_dir: docs
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.top
+    - search.suggest
+    - content.action.none
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+
+extra_css:
+  - stylesheets/wiki.css
+
+markdown_extensions:
+  - tables
+  - attr_list
+  - md_in_html
+  - sane_lists
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+# Nav is auto-generated from docs/ for now (alphabetical, index.md as Home).
+# A curated/grouped nav comes in increment 3.

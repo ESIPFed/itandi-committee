@@ -1,0 +1,43 @@
+/* Loose match to the ESIP MediaWiki (Vector skin) look, layered over the
+   Material theme. Goal is "reads like the old wiki," not a pixel copy. */
+
+:root {
+  --md-primary-fg-color: #36c;
+  --md-accent-fg-color: #447ff5;
+  /* MediaWiki link blue / visited purple */
+  --md-typeset-a-color: #3366cc;
+}
+
+/* Vector draws a thin rule under the page title and section headings. */
+.md-typeset h1,
+.md-typeset h2 {
+  font-weight: 400;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 0.15em;
+}
+
+.md-typeset h1 {
+  color: #000;
+}
+
+/* Vector body is a serif-free, slightly narrower column with tighter type. */
+.md-typeset {
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+/* The small provenance banner the converter puts at the top of each page. */
+.wiki-archive-note {
+  font-size: 0.72rem;
+  color: #54595d;
+  background: #f8f9fa;
+  border: 1px solid #a2a9b1;
+  border-radius: 2px;
+  padding: 0.4rem 0.6rem;
+  margin-bottom: 1rem;
+}
+
+/* Keep embedded YouTube players from overflowing the content column. */
+.md-typeset iframe {
+  max-width: 100%;
+}
