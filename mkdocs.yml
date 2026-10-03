@@ -38,6 +38,7 @@ plugins:
 nav:
   - Home: index.md
   - "Governance & Membership":
+      - "Interoperability and Technology": interoperability-and-technology.md
       - "2016 IT&I Plan": 2016-it-i-plan.md
       - "IT&I Chair": it-i-chair.md
       - "Information Technology and Interoperability Committee Members": information-technology-and-interoperability-committee-members.md
