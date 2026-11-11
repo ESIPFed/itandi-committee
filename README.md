@@ -1,10 +1,12 @@
 # ESIP IT&I Committee
 
-Home of the ESIP Information Technology & Interoperability (IT&I) Committee on
-GitHub, served as a GitHub Pages site: <https://esipfed.github.io/itandi-committee/>.
+The ESIP Information Technology and Interoperability (IT&I) committee is a standing ESIP committee focused on ESIP community-wide IT interoperability topics. The committee convenes monthly conversations on topics of broad interest in an effort to provide a venue for continuity and coordination of IT&I topics between ESIP January and July meetings. 
 
-The current content is **phase one**: a readable archive of the committee's
-content migrated from the ESIP MediaWiki — its governance, the Tech Dive and
+This github is the committee's home to track historical and ongoing activities.
+
+The current content is **phase one**: a [readable archive of the committee's
+content migrated from the ESIP MediaWiki](https://esipfed.github.io/itandi-committee/)
+ — its governance, the Tech Dive and
 Rants & Raves webinar series, telecons and meeting notes, the technical
 workshops it ran, and its demonstrations (32 pages). Pages outside this curated
 set link back to the live wiki at <https://wiki.esipfed.org/>.
