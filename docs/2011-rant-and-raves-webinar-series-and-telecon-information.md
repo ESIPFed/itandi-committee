@@ -483,13 +483,13 @@ joining the meeting
 Meeting ID: 584-109-752
 
 <figure>
-<embed src="files/Download_Presentation.pdf"
+<embed src="../files/Download_Presentation.pdf"
 title="Download_Presentation.pdf" />
 <figcaption>Download_Presentation.pdf</figcaption>
 </figure>
 
 <figure>
-<embed src="files/Download_Collaboration_Questionnaire.pdf"
+<embed src="../files/Download_Collaboration_Questionnaire.pdf"
 title="Download_Collaboration_Questionnaire.pdf" />
 <figcaption>Download_Collaboration_Questionnaire.pdf</figcaption>
 </figure>

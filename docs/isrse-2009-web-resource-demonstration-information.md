@@ -65,6 +65,6 @@ Center, [SSEC](http://www.ssec.wisc.edu)
 Screenshot follows:
 
 <figure>
-<img src="files/McV_screenshot.jpg" title="McV_screenshot.jpg" />
+<img src="../files/McV_screenshot.jpg" title="McV_screenshot.jpg" />
 <figcaption>McV_screenshot.jpg</figcaption>
 </figure>

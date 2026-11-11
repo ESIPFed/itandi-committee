@@ -335,7 +335,9 @@ class Resolver:
         if has_scheme(src):
             return m.group(0)
         local = self.file_local(src)
-        return f"{pre}files/{local}{post}" if local else m.group(0)
+        # Raw HTML is not path-rewritten by MkDocs, and with directory URLs each
+        # page is served one level down at <slug>/, so step up to the site root.
+        return f"{pre}../files/{local}{post}" if local else m.group(0)
 
 
 def rewrite(md: str, resolver: Resolver) -> str:

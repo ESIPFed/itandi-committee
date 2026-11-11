@@ -28,7 +28,7 @@ These conventions aim to provide a clear and standardized framework for
 organizing and describing data that ensures unambiguous representation.
 
 <figure>
-<img src="files/ITI_July_2024.png" title="IT&amp;I July 2024" />
+<img src="../files/ITI_July_2024.png" title="IT&amp;I July 2024" />
 <figcaption>IT&amp;I July 2024</figcaption>
 </figure>
 
@@ -58,7 +58,7 @@ can take or recommendations that the Community can advocate to the
 Fundamental Science Practices Advisory Council or others.
 
 <figure>
-<img src="files/ITI_June_2024.png" title="IT&amp;I June 2024" />
+<img src="../files/ITI_June_2024.png" title="IT&amp;I June 2024" />
 <figcaption>IT&amp;I June 2024</figcaption>
 </figure>
 
@@ -79,7 +79,7 @@ Observations, measurements and samples ; OGC SensorThings API) while
 answering domain needs and maximize community effect.
 
 <figure>
-<img src="files/ITI_May_2024.png" title="IT&amp;I FAIR water quality data" />
+<img src="../files/ITI_May_2024.png" title="IT&amp;I FAIR water quality data" />
 <figcaption>IT&amp;I FAIR water quality data</figcaption>
 </figure>
 
@@ -90,7 +90,7 @@ answering domain needs and maximize community effect.
 **<u>Slides</u>**
 
 <figure>
-<embed src="files/FAIR_water_quality_data_OGC_Grellet-compressed.pdf"
+<embed src="../files/FAIR_water_quality_data_OGC_Grellet-compressed.pdf"
 title="Slides from May 2024 IT&amp;I" />
 <figcaption>Slides from May 2024 IT&amp;I</figcaption>
 </figure>
@@ -129,7 +129,7 @@ will share insights on the behind-the-scenes IT structures that support
 our communities of practice.
 
 <figure>
-<img src="files/ITI_April2024.png"
+<img src="../files/ITI_April2024.png"
 title="IT&amp;I ESIP Communities of Practice" />
 <figcaption>IT&amp;I ESIP Communities of Practice</figcaption>
 </figure>
@@ -182,7 +182,7 @@ Try to go the extra mile to adapt so that these issues are overcome.
 [(Brian Goldin](https://www.voyagersearch.com/))
 
 <figure>
-<img src="files/ITI_March2024.png"
+<img src="../files/ITI_March2024.png"
 title="IT&amp;I Operational Remote Sensing 2024" />
 <figcaption>IT&amp;I Operational Remote Sensing 2024</figcaption>
 </figure>
@@ -270,7 +270,7 @@ registry."
 [(Jed Sundwall](https://radiant.earth/about/))
 
 <figure>
-<img src="files/ITI_Feb2024.png" title="IT&amp;I Cloud Data Products 2024" />
+<img src="../files/ITI_Feb2024.png" title="IT&amp;I Cloud Data Products 2024" />
 <figcaption>IT&amp;I Cloud Data Products 2024</figcaption>
 </figure>
 
@@ -471,7 +471,7 @@ sensing to help build a decision support tool.
 ## November 9th: "Persistent Unique Well Identifiers: Why does California need well IDs?"
 
 <figure>
-<img src="files/ITI_Nov_Wells.png" title="IT&amp;I CA Wells November 2023" />
+<img src="../files/ITI_Nov_Wells.png" title="IT&amp;I CA Wells November 2023" />
 <figcaption>IT&amp;I CA Wells November 2023</figcaption>
 </figure>
 
@@ -556,7 +556,7 @@ Reference during Q&A
 ## October 26th: "Improving standards and documentation publishing methods: Why can’t we cross the finish line?"
 
 <figure>
-<img src="files/ITI_Oct_ogc.png" title="IT&amp;I OGC October 2023" />
+<img src="../files/ITI_Oct_ogc.png" title="IT&amp;I OGC October 2023" />
 <figcaption>IT&amp;I OGC October 2023</figcaption>
 </figure>
 
@@ -640,7 +640,7 @@ A lot of this focused on APIs – what about data models?
 ## September 14th: "Water data standardization: Navigating the AntiCommons"
 
 <figure>
-<img src="files/ITI_Sept_IoW_Kyle-Onda.png"
+<img src="../files/ITI_Sept_IoW_Kyle-Onda.png"
 title="IT&amp;I IoW September 2023" />
 <figcaption>IT&amp;I IoW September 2023</figcaption>
 </figure>
@@ -713,7 +713,7 @@ structured data "decoration" to make documentation more standard.
 ## August 10th: "Learning to love the upside down: Quarto and the two data science worlds"
 
 <figure>
-<img src="files/ITI_August_Quarto.png" title="IT&amp;I Quarto August 10th" />
+<img src="../files/ITI_August_Quarto.png" title="IT&amp;I Quarto August 10th" />
 <figcaption>IT&amp;I Quarto August 10th</figcaption>
 </figure>
 
@@ -819,7 +819,7 @@ Can also write your own shortcodes.
 ## July 13th 2023: "Tools to Assist Simulation Based Researchers in Deciding What Project Outputs to Preserve and Share"
 
 <figure>
-<img src="files/ITI_July_EarthCube.png"
+<img src="../files/ITI_July_EarthCube.png"
 title="IT&amp;I EarthCube Model RCN July 13th" />
 <figcaption>IT&amp;I EarthCube Model RCN July 13th</figcaption>
 </figure>
@@ -889,7 +889,7 @@ seen as a benefit to the author.
 ## June 8 2023: "Reproducible Data Pipelines in Modern Data Science: what they are, how to use them, and examples you can use!"
 
 <figure>
-<img src="files/ITI_June_Pipeline.png"
+<img src="../files/ITI_June_Pipeline.png"
 title="IT&amp;I Reproducible Pipelines June 8th" />
 <figcaption>IT&amp;I Reproducible Pipelines June 8th</figcaption>
 </figure>
@@ -986,7 +986,7 @@ people are working on the problem.
 ## 11 May 2023: "Software Procurement Has Failed Us Completely, But No More!"
 
 <figure>
-<img src="files/ITI_May_Software.png"
+<img src="../files/ITI_May_Software.png"
 title="IT&amp;I Software Procurement May 11th" />
 <figcaption>IT&amp;I Software Procurement May 11th</figcaption>
 </figure>
@@ -1112,7 +1112,7 @@ Westrum typology of cultures article is relevant is relevant:
 ## 13 April 2023: "Evolution of open source geospatial python."
 
 <figure>
-<img src="files/Iti_april_geospatialpython_720.png"
+<img src="../files/Iti_april_geospatialpython_720.png"
 title="IT&amp;I Python Open Source April 13th" />
 <figcaption>IT&amp;I Python Open Source April 13th</figcaption>
 </figure>
