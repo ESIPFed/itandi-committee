@@ -36,8 +36,8 @@ Conversion from the harvest is a **local authoring step, not a CI step**: the `.
 - converts each page's wikitext with pandoc, falling back to the rendered-HTML track when pandoc cannot parse the wikitext, and to the full-history XML when a page has no current revision;
 - rewrites internal links to local pages, resolves images and attachments into `docs/files/`, and points every out-of-archive link at the live wiki;
 - writes `tools/slugmap.json` (title → page slug) and `tools/external-links.json` (every link that now points back to `wiki.esipfed.org` — a worklist for when more pages are archived);
-- generates the archive home (`docs/index.md`): a short intro, links to the current ESIP committee page and this repo, and an annotated, grouped index of the pages. The committee's old wiki landing page is kept as a normal page (`interoperability-and-technology.md`), not the home;
-- writes the grouped site nav into `mkdocs.yml` between the `# NAV` markers. The section grouping and the per-page annotations live in `SECTIONS`/`ANNOTATIONS` in `tools/convert.py`.
+- generates the archive home (`docs/wiki-archive/index.md`): a short intro, links to the current ESIP committee page and this repo, and an annotated, grouped index of the pages. With Material's `navigation.indexes`, it is the page the "Wiki Archive" nav entry opens. The committee's old wiki landing page is kept as a normal page (`interoperability-and-technology.md`), not the archive home. The site home, `docs/index.md`, is hand-written and the converter does not touch it;
+- writes the grouped archive nav into `mkdocs.yml` between the `# NAV` markers, as a single top-level "Wiki Archive" entry holding the sections. The section grouping and the per-page annotations live in `SECTIONS`/`ANNOTATIONS` in `tools/convert.py`. The `nav:` key, the Home entry, and any headings for current (non-archive) pages are hand-written in `mkdocs.yml` outside the markers, so a converter re-run leaves them alone.
 
 ## Theme and branding
 
@@ -52,4 +52,4 @@ The harvest bounded IT&I to 211 titles by a depth-4 link walk, but that walk rea
 
 ## Current state
 
-Phase one is in place: 32 curated committee pages with their attachments under `docs/`, a generated archive home, ESIP branding, the MkDocs build, the Pages workflow, and the curation worklist. Enabling Pages (source: GitHub Actions) in the repository settings is a one-time manual step on github.com. Later phases — awesome list, help tracker, meetings and activities — are not started.
+Phase one is in place: 32 curated committee pages with their attachments under `docs/`, a generated archive home under the "Wiki Archive" nav entry, a hand-written site home and Meetings page (`docs/meetings.md`, newest meeting first), ESIP branding, the MkDocs build, the Pages workflow, and the curation worklist. Enabling Pages (source: GitHub Actions) in the repository settings is a one-time manual step on github.com. Later phases — awesome list, help tracker, meetings and activities — are not started.

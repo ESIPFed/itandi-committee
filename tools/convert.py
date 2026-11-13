@@ -387,7 +387,7 @@ def render_page(title, manifest):
 def emit_page(title, raw_md, slug, slugmap, filemap, referenced, external):
     resolver = Resolver(slugmap, filemap, title, referenced, external)
     md = rewrite(raw_md, resolver)
-    out = DOCS / f"{slug}.md"  # index.md is the generated archive home, not a page
+    out = DOCS / f"{slug}.md"  # wiki-archive/index.md is the generated archive home, not a page
     front = f"---\ntitle: {json.dumps(title)}\n---\n\n"
     out.write_text(f"{front}# {title}\n\n{banner(title)}{md.strip()}\n", encoding="utf-8")
 
@@ -529,14 +529,14 @@ def generate_home(slugmap: dict, present: set) -> str:
             placed.add(t)
             note = ANNOTATIONS.get(t, "")
             dash = f" — {note}" if note else ""
-            out.append(f"- [{nav_label(t)}]({slugmap[norm_title(t)]}.md){dash}")
+            out.append(f"- [{nav_label(t)}](../{slugmap[norm_title(t)]}.md){dash}")
         out.append("")
     leftover = sorted(t for t in present if t not in placed)
     if leftover:
         out.append("### Other")
         out.append("")
         for t in leftover:
-            out.append(f"- [{nav_label(t)}]({slugmap[norm_title(t)]}.md)")
+            out.append(f"- [{nav_label(t)}](../{slugmap[norm_title(t)]}.md)")
         out.append("")
     return "\n".join(out)
 
@@ -547,23 +547,25 @@ def nav_label(title: str) -> str:
 
 
 def generate_nav(slugmap: dict, present: set) -> str:
-    lines = ["nav:", "  - Home: index.md"]
+    # Only the "Wiki Archive" entry is generated. `nav:`, Home, and the headings for
+    # current (non-archive) pages are hand-written in mkdocs.yml outside the markers.
+    lines = ['  - "Wiki Archive":', "      - wiki-archive/index.md"]
     placed = {"Interoperability and Technology"}
     for name, titles in SECTIONS:
         entries = []
         for t in titles:
             key = norm_title(t)
             if t in present and key in slugmap:
-                entries.append(f"      - {json.dumps(nav_label(t))}: {slugmap[key]}.md")
+                entries.append(f"          - {json.dumps(nav_label(t))}: {slugmap[key]}.md")
                 placed.add(t)
         if entries:
-            lines.append(f"  - {json.dumps(name)}:")
+            lines.append(f"      - {json.dumps(name)}:")
             lines.extend(entries)
     leftover = sorted(t for t in present if t not in placed)
     if leftover:
-        lines.append('  - "Other":')
+        lines.append('      - "Other":')
         for t in leftover:
-            lines.append(f"      - {json.dumps(nav_label(t))}: {slugmap[norm_title(t)]}.md")
+            lines.append(f"          - {json.dumps(nav_label(t))}: {slugmap[norm_title(t)]}.md")
             log(f"  nav: '{t}' not in any section -> Other")
     return "\n".join(lines)
 
@@ -576,7 +578,7 @@ def write_nav(nav_block: str) -> None:
     if pattern.search(text):
         text = pattern.sub(region, text)
     else:
-        text = text.rstrip() + "\n\n" + region + "\n"
+        text = text.rstrip() + "\n\nnav:\n  - Home: index.md\n" + region + "\n"
     cfg.write_text(text, encoding="utf-8")
 
 
@@ -642,9 +644,10 @@ def main() -> int:
 
     if not args.only:  # a pilot subset would produce a misleading partial nav/home
         present = set(rendered)
-        (DOCS / "index.md").write_text(generate_home(slugmap, present), encoding="utf-8")
+        (DOCS / "wiki-archive").mkdir(exist_ok=True)
+        (DOCS / "wiki-archive" / "index.md").write_text(generate_home(slugmap, present), encoding="utf-8")
         write_nav(generate_nav(slugmap, present))
-        log("wrote archive home (docs/index.md) and grouped nav into mkdocs.yml")
+        log("wrote archive home (docs/wiki-archive/index.md) and grouped nav into mkdocs.yml")
     return 0
 
 
